@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./01.js"></script>
+</head>
+
+<body>
+    <script>
+        // JavaScript 变量的生命期从它们被声明的时间开始。
+        // 局部变量会在函数运行以后被删除。
+        // 全局变量会在页面关闭后被删除。
+        num = 2
+        // 如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。
+        // 将声明 window 的一个属性 num。
+        // 非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除。
+        console.log(window);
+        console.log(window.num);
+        delete num
+        console.log(window.num);
+        //window.num是undefined未被定义的
+        console.log(num);
+        //删除之后会显示num is not defined
+    </script>
+</body>
+
+</html>
